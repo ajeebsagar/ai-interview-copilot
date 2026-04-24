@@ -1,8 +1,8 @@
 // LockedIn AI - Configuration
 const CONFIG = {
   // Backend API Configuration
-  API_URL: 'http://localhost:8000',
-  WS_URL: 'ws://localhost:8000',
+  API_URL: 'https://lockedin-ai-backend.onrender.com',
+  WS_URL: 'wss://lockedin-ai-backend.onrender.com',
   API_KEY: 'MySecretKey12345!@#$%', // Match backend .env API_KEY
 
   // Feature Flags
