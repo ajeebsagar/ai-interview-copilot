@@ -9,9 +9,7 @@ openai==1.54.0
 azure-identity==1.19.0
 
 # Faster Whisper for local speech-to-text (CPU optimized)
-# Note: On Windows, faster-whisper requires ffmpeg. For testing, we'll use a simpler approach.
-# Install faster-whisper separately if needed: pip install faster-whisper
-# faster-whisper==1.0.3
+faster-whisper==1.0.3
 
 # WebSocket support
 websockets==13.0
