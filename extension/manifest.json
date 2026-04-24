@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "LockedIn AI - Interview Copilot",
+  "version": "1.0.0",
+  "description": "Real-time coding interview assistant with AI support, audio transcription, and Duo mode collaboration",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "tabCapture",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "config/config.js",
+        "config/prompts.js",
+        "utils/websocket-client.js",
+        "utils/audio-recorder.js",
+        "utils/screen-capture.js",
+        "content/audio-capture.js",
+        "content/overlay.js",
+        "content/content.js"
+      ],
+      "css": ["styles/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "commands": {
+    "toggle-overlay": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Toggle LockedIn AI overlay"
+    }
+  },
+  "web_accessible_resources": []
+}

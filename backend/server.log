@@ -1,0 +1,10 @@
+INFO:     Will watch for changes in these directories: ['D:\\All_project\\JAI SHREE RAM\\lockedin-ai\\backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12368] using WatchFiles
+INFO:     Started server process [8616]
+INFO:     Waiting for application startup.
+2026-04-22T06:10:52.100523Z [info     ] Starting LockedIn AI           app_name='LockedIn AI Backend' environment=development version=1.0.0
+2026-04-22T06:10:52.100821Z [info     ] Service configuration          azure_deployment=gpt-4o whisper_device=cpu whisper_model=base
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'src\main.py'. Reloading...
+ 

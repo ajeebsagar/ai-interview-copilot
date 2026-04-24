@@ -1,0 +1,432 @@
+/* LockedIn AI - Overlay Styles */
+
+#lockedin-overlay {
+  all: initial;
+  position: fixed !important;
+  top: 80px;
+  right: 20px;
+  width: 520px;
+  max-height: 85vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  z-index: 2147483647 !important;
+  display: none;
+  flex-direction: column;
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.lockedin-header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 18px 24px;
+  border-radius: 20px 20px 0 0;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.lockedin-title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lockedin-header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.lockedin-header-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.lockedin-header-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Body */
+.lockedin-body {
+  background: white;
+  padding: 24px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: calc(85vh - 80px);
+  overflow-y: auto;
+}
+
+/* Tabs */
+.lockedin-tabs {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 6px;
+  gap: 4px;
+}
+
+.lockedin-tab {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.lockedin-tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lockedin-tab:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Tab Contents */
+.lockedin-tab-content {
+  display: none;
+}
+
+.lockedin-tab-content.active {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Textarea */
+.lockedin-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.lockedin-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Buttons */
+.lockedin-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lockedin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.lockedin-btn:active {
+  transform: translateY(0);
+}
+
+.lockedin-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.lockedin-btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.lockedin-btn-secondary:hover {
+  background: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Recording UI */
+.lockedin-recording {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.lockedin-recording-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.lockedin-recording-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.lockedin-recording-timer {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ef4444;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Screenshot Preview */
+.lockedin-screenshot-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+}
+
+/* Response Area */
+.lockedin-response {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 450px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.lockedin-response:empty {
+  display: none;
+}
+
+.lockedin-response h3 {
+  color: #667eea;
+  margin: 16px 0 8px;
+  font-size: 16px;
+}
+
+.lockedin-response strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.lockedin-response code {
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+/* Loading Spinner */
+.lockedin-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Status Messages */
+.lockedin-status {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.3s;
+}
+
+.lockedin-status-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.lockedin-status-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.lockedin-status-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Duo Mode UI */
+.lockedin-duo-session {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px solid #667eea;
+}
+
+.lockedin-duo-code {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #667eea;
+  letter-spacing: 4px;
+  padding: 16px;
+  background: white;
+  border-radius: 10px;
+  margin: 12px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.lockedin-duo-participants {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.lockedin-participant {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.lockedin-participant-dot {
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Scrollbar */
+.lockedin-body::-webkit-scrollbar,
+.lockedin-response::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lockedin-body::-webkit-scrollbar-track,
+.lockedin-response::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.lockedin-body::-webkit-scrollbar-thumb,
+.lockedin-response::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.lockedin-body::-webkit-scrollbar-thumb:hover,
+.lockedin-response::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Context History Badge */
+.lockedin-context-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Copy Button */
+.lockedin-copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 12px;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lockedin-copy-btn:hover {
+  background: rgba(102, 126, 234, 0.2);
+}

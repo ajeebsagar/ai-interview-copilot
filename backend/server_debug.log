@@ -1,0 +1,17 @@
+INFO:     Started server process [17916]
+INFO:     Waiting for application startup.
+============================================================
+Starting LockedIn AI Backend v1.0.0
+============================================================
+Host: 0.0.0.0:8000
+CORS Origins: *
+Auto-reload: DISABLED (for stable operation)
+============================================================
+
+2026-04-22T06:22:19.157119Z [info     ] Starting LockedIn AI           app_name='LockedIn AI Backend' environment=development version=1.0.0
+2026-04-22T06:22:19.157406Z [info     ] Service configuration          azure_deployment=gpt-4o whisper_device=cpu whisper_model=base
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+2026-04-22T06:22:19.158218Z [info     ] Shutting down LockedIn AI     
+INFO:     Application shutdown complete.

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LockedIn AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <h1>🧠 LockedIn AI</h1>
+      <p class="popup-subtitle">Your Interview Copilot</p>
+    </div>
+
+    <div class="popup-body">
+      <div class="feature-list">
+        <div class="feature">
+          <span class="feature-icon">🎙️</span>
+          <span class="feature-text">Audio Transcription</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">📸</span>
+          <span class="feature-text">Screen OCR</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">👥</span>
+          <span class="feature-text">Duo Mode</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🧠</span>
+          <span class="feature-text">AI Assistance</span>
+        </div>
+      </div>
+
+      <button class="popup-btn" id="toggle-overlay">
+        Open Assistant
+      </button>
+
+      <div class="popup-info">
+        <div class="info-item">
+          <strong>Shortcut:</strong> Ctrl+Shift+L
+        </div>
+        <div class="info-item">
+          <strong>Status:</strong> <span id="backend-status">Checking...</span>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <a href="http://localhost:8000/docs" target="_blank" class="popup-link">
+          API Docs
+        </a>
+        <span>•</span>
+        <a href="#" id="settings-link" class="popup-link">
+          Settings
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
